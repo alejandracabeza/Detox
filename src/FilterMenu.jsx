@@ -1,15 +1,13 @@
-import React, {useState}from 'react';
-import './../App.css';
+import React, { useState } from 'react';
+import './App.css';
 
 
-function FilterMenu({content}, props, {itemName}){
+function FilterMenu(props, {content}){
     let [searchValue, setSearchValue] = useState("");
     
     const searchBar =  <input value={searchValue} 
     onChange={event => setSearchValue(event.target.value)}
     placeholder="Search"/>;
-
-    console.log(itemName.name);
 
     return(
         <React.Fragment>

@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import UploadButton from './components/UploadButton';
-import DisplayJSON from './components/DisplayJSON';
-import FilterMenu from './components/FilterMenu';
+import UploadButton from './UploadButton';
+import DisplayJSON from './DisplayJSON';
+import FilterMenu from './FilterMenu';
+import Navbar from './Navbar';
 
 function App() {
   let [content, setContent] = useState();
@@ -19,10 +20,10 @@ function App() {
 
   return (
     <div className="App">
+      <Navbar />
       <UploadButton handleChange={handleContentChange} />
       <FilterMenu content={content} search={searchValue} handleValue={handleSearchValue} />
       <DisplayJSON content={content} />
-
     </div>
   );
 }

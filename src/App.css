@@ -16,8 +16,8 @@ body{
 /* Upload button*/
 
 #uploadDiv{
-  height: 30vh;
-  padding: 2%;
+  height: 20vh;
+  padding: 1%;
   display: grid;
   justify-content: center;
   align-content: center;
@@ -69,5 +69,32 @@ body{
   background-color: whitesmoke;
   color: #808080;
   border-radius: 5%;
+}
+
+/*NavBar*/
+
+#logo{
+  display: flex;
+  justify-content: flex-start;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  background: rgba(176, 159, 182, 0.75);
+
+}
+
+li{
+  margin: 0;
+  height: 100%;
+  padding: 2%;
+  margin-right: 5%;
+}
+
+li:hover{
+  
+  background: rgba(142, 126, 148, 0.75)
 }
 
