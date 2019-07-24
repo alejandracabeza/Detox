@@ -3,39 +3,29 @@ import React, {useState} from 'react';
 import './App.css';
 import UploadButton from './UploadButton';
 import DisplayJSON from './DisplayJSON';
-import FilterMenu from './FilterMenu';
+import Search from './Search';
 import Navbar from './Navbar';
 
 function App() {
   let [content, setContent] = useState();
   let [searchValue, setSearchValue] = useState("");
 
-  function searchBar(){
-    return (
-      <input value={searchValue} 
-  onChange={event => setSearchValue(event.target.value)}
-  placeholder="Search"/>
-    )
-  }
 
   function handleContentChange(content){
     setContent(content);
   }
-
   function handleSearchValue(searchValue){
     setSearchValue(searchValue);
   }
 
-  const filteredData = filterData(content, searchValue)
-
-
+  
   function filterData(data, filter) {
    return data ? data.map((JSONitem, index) => {
       return JSONitem.map((JSONitem1, i) =>{
       let search = filter.toLowerCase();
       let name = JSONitem1["name"].toLowerCase();
       if(name.includes(search)){
-          console.log(Object.values(JSONitem1));
+          console.log(JSONitem1);
           return (
               <div className="listItem" key={i}>
                   <div>
@@ -43,20 +33,19 @@ function App() {
                   </div>
               </div>
           ) 
-       }
+       }console.log(filter);
       
-  })}) : null
+  })}) : null 
   }
 
+const filteredData = filterData(content, searchValue)
 
   return (
     <div className="App">
-          <Navbar />
-          <UploadButton handleChange={handleContentChange} />
-          <searchBar />
-          <FilterMenu content={filteredData} search={searchValue} handleValue={handleSearchValue} />
-          <DisplayJSON content={filteredData} />
-      
+      <Navbar />
+      <UploadButton handleChange={handleContentChange} />
+      <Search content={filteredData} search={searchValue} handleValue={handleSearchValue} />
+      <DisplayJSON content={content} fil={filteredData} />
     </div>
   );
 }

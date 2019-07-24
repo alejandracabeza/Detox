@@ -1,17 +1,10 @@
 import React from 'react';
 import './App.css';
 
-function DisplayJSON({content}){
-
+function DisplayJSON({fil}){
     return (
-        <div className="DisplayJSON"> ITEMS: 
-            {content ? content.map((item, i) =>{
-                return item.map((itemName, i) =>{
-                return (
-                <div key={i}>
-                    {itemName.name}
-                </div>)
-                })}) :null }
+        <div className="DisplayJSON"> Following: 
+            <div>{fil}</div>
         </div>
     )
 }
