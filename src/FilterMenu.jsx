@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 
-function FilterMenu(props, {content}){
+function FilterMenu({content}){
     let [searchValue, setSearchValue] = useState("");
     
     const searchBar =  <input value={searchValue} 

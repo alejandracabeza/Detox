@@ -4,7 +4,7 @@ import './App.css';
 function DisplayJSON({content}){
 
     return (
-        <div className="DisplayJSON"> Following: 
+        <div className="DisplayJSON"> ITEMS: 
             {content ? content.map((item, i) =>{
                 return item.map((itemName, i) =>{
                 return (
