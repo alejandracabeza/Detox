@@ -1,13 +1,9 @@
     
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 
 
 function Search(props, {fil}){
-
-    
- 
-
     return(
         <React.Fragment>
              <h1>Search</h1>

@@ -24,6 +24,7 @@ import './App.css';
           id='file'
           accept='.json'
           onChange={e => handleFileChosen(e.target.files[0])}
+          onClick={props.changeView}
            />
           <label htmlFor="file">Choose a file</label>
         </div>
