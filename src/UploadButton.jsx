@@ -6,8 +6,13 @@ import './App.css';
     let fileReader;
   
     const handlefileRead = () => {
-      props.handleChange(Object.values(JSON.parse(fileReader.result)));
-  
+      const file = JSON.parse(fileReader.result)
+     
+      if(file.following){
+        props.handleChange(Object.values(file));
+      }else if(file.archived_stories){
+        props.handleStories();
+      }
     }
 
     const handleFileChosen = (file) =>{
@@ -18,13 +23,11 @@ import './App.css';
   
     return (
       <React.Fragment>
-        
         <div id="uploadDiv">
           <input type='file'
           id='file'
           accept='.json'
           onChange={e => handleFileChosen(e.target.files[0])}
-          onClick={props.changeView}
            />
           <label htmlFor="file">Choose a file</label>
         </div>
