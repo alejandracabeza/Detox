@@ -11,11 +11,18 @@ function DisplayStories({stories}){
       }
     
       function filterData(data, filter) {
+       return data ? data.map((JSONitem, index) => {
+           console.log(JSONitem);
+          return JSONitem.map((JSONitem1, i) =>{
+          let search = filter.toLowerCase();
+          let name = JSONitem1["name"].toLowerCase();
+          if(name.includes(search)){
+              
               return (
                   <React.Fragment>
                     <div className="listItem" key={i}>
                         <div>
-                            <div>{}</div>
+                            <div>{JSONitem1.name}</div>
                         </div>
                     </div>
                   </React.Fragment>
