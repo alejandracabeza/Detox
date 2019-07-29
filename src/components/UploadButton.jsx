@@ -1,7 +1,7 @@
 import React from "react";
-import "./App.css";
-// import FilterMenu from './FilterMenu';
+import "./../App.css";
 
+// -- Choosing file part -- //
 function UploadButton(props) {
   let fileReader;
 

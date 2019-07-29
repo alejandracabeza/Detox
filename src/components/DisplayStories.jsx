@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import Navbar from "./../Navbar";
-import Search from "./../Search";
+import React from "react";
+import Search from "./Search";
 
 function DisplayStories({ stories }) {
   function filterData(data) {
@@ -15,6 +14,7 @@ function DisplayStories({ stories }) {
                       return (
                         <React.Fragment>
                           <div className="listItem" key={l}>
+                            {console.log(fourthArray.media.uri)}
                             <div>
                               <div>{fourthArray.media.uri}</div>
                             </div>
@@ -35,7 +35,6 @@ function DisplayStories({ stories }) {
 
   return (
     <React.Fragment>
-      <Navbar />
       <Search
         content={filteredData}
         // search={searchValue}

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./../App.css";
 import Search from "./Search";
-import Navbar from "./Navbar";
 
 function DisplayJSON({ content }) {
   let [searchValue, setSearchValue] = useState("");
@@ -19,7 +18,7 @@ function DisplayJSON({ content }) {
             if (name.includes(search)) {
               return (
                 <React.Fragment>
-                  <div className="listItem" key={i}>
+                  <div className="listItem">
                     <div>
                       <div>{JSONitem1.name}</div>
                     </div>
@@ -36,7 +35,6 @@ function DisplayJSON({ content }) {
 
   return (
     <React.Fragment>
-      <Navbar />
       <Search
         content={filteredData}
         search={searchValue}
