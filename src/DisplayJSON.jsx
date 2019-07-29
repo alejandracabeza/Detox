@@ -36,7 +36,7 @@ function DisplayJSON({ content }) {
 
   return (
     <React.Fragment>
-      <Navbar />
+      {/* <Navbar /> */}
       <Search
         content={filteredData}
         search={searchValue}
