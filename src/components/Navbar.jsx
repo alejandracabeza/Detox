@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div>
-      <nav>
-        <ul>
+      <nav className="navbar">
+        <div>
           <img src={require("./../logo.png")} alt="" id="logo" />
+        </div>
+        <ul className="nav-links">
           <li className="menuItem">
             <Link to="/home/">Home</Link>
           </li>
