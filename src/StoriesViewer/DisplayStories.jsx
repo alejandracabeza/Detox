@@ -14,7 +14,7 @@ function DisplayStories({ stories }) {
                     if (!!fourthArray.media.uri) {
                       return (
                         <React.Fragment>
-                          <div className="listItem" key={i}>
+                          <div className="listItem" key={l}>
                             <div>
                               <div>{fourthArray.media.uri}</div>
                             </div>

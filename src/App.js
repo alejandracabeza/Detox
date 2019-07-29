@@ -23,6 +23,8 @@ function App() {
     return <DisplayJSON content={content} />;
   } else if (stories) {
     return <DisplayStories stories={stories} />;
+  } else if (!content) {
+    return <UploadButton />;
   }
 
   return (
