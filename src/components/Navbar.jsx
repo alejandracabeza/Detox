@@ -7,11 +7,13 @@ function Navbar() {
     <div>
       <nav className="navbar">
         <div>
-          <img src={require("./../logo.png")} alt="" id="logo" />
+          <Link to="/home/">
+            <img src={require("./../logo.png")} alt="" id="logo" />
+          </Link>
         </div>
         <ul className="nav-links">
           <li className="menuItem">
-            <Link to="/home/">Home</Link>
+            <Link to="/dashboard/">Dashboard</Link>
           </li>
           <li className="menuItem">
             <Link to="/upload/">Upload</Link>

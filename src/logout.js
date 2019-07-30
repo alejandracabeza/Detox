@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Logout extends Component {
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {};
   }
-  render() { 
-    return ( 
+  render() {
+    return (
       <div>
-        <p>Public page who loged out.</p>
+        <h1>Log Out</h1>
       </div>
-     );
+    );
   }
 }
- 
+
 export default Logout;

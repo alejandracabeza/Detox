@@ -14,9 +14,9 @@ function DisplayStories({ stories }) {
                       return (
                         <React.Fragment>
                           <div className="listItem" key={l}>
-                            {console.log(fourthArray.media.uri)}
+                            {console.log(fourthArray)}
                             <div>
-                              <div>{fourthArray.media.uri}</div>
+                              <div>{fourthArray}</div>
                             </div>
                           </div>
                         </React.Fragment>

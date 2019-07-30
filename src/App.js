@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Private from "./Private";
 import Home from "./home";
 import Logout from "./logout";
+import Dashboard from "./components/dashboard";
 
 class App extends Component {
   constructor(props) {
@@ -18,7 +19,8 @@ class App extends Component {
         <div>
           <Navbar />
           <Switch>
-            <Route path="/home/" exact component={Home} />
+            <Route path="/home" exact component={Home} />
+            <Route path="/dashboard/" component={Dashboard} />
             <Route
               path="/upload/"
               render={props => <Private data={this.state.content} {...props} />}
