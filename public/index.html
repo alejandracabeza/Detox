@@ -34,6 +34,25 @@
 
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    --><!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDHczpeIINteEY_DgVMxzwfH4XoP_IBxlc",
+        authDomain: "detox-app.firebaseapp.com",
+        databaseURL: "https://detox-app.firebaseio.com",
+        projectId: "detox-app",
+        storageBucket: "",
+        messagingSenderId: "36094420462",
+        appId: "1:36094420462:web:f630b47e5a610937"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
   </body>
 </html>

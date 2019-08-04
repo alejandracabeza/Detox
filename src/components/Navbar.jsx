@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <div>
+    <React.Fragment>
       <nav className="navbar">
         <div>
           <Link to="/home/">
@@ -23,7 +23,7 @@ function Navbar() {
           </li>
         </ul>
       </nav>
-    </div>
+    </React.Fragment>
   );
 }
 

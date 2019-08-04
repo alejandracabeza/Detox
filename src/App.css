@@ -256,3 +256,18 @@ input.search-bar:-ms-placeholder {
   height: 25vh;
   margin: auto;
 }
+/*login*/
+
+form {
+  display: grid;
+  justify-content: center;
+}
+
+label {
+  margin: 3px;
+  align-items: center;
+}
+
+input {
+  border-radius: 3px;
+}
