@@ -24,6 +24,27 @@ function Dashboard() {
           className="eachIcon"
         />
       </div>
+      <div>
+        <img
+          src={require("./../assets/profileIcon.png")}
+          alt="icon"
+          className="eachIcon"
+        />
+      </div>
+      <div>
+        <img
+          src={require("./../assets/videosIcon.png")}
+          alt="icon"
+          className="eachIcon"
+        />
+      </div>
+      <div>
+        <img
+          src={require("./../assets/postsIcon.png")}
+          alt="icon"
+          className="eachIcon"
+        />
+      </div>
     </div>
   );
 }

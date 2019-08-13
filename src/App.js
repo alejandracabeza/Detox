@@ -8,7 +8,20 @@ import Home from "./home";
 import Logout from "./components/logout";
 import Dashboard from "./components/dashboard";
 import login from "./components/login";
+import * as firebase from "firebase";
 
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyDHczpeIINteEY_DgVMxzwfH4XoP_IBxlc",
+  authDomain: "detox-app.firebaseapp.com",
+  databaseURL: "https://detox-app.firebaseio.com",
+  projectId: "detox-app",
+  storageBucket: "",
+  messagingSenderId: "36094420462",
+  appId: "1:36094420462:web:f630b47e5a610937"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 class App extends Component {
   constructor(props) {
     super(props);
