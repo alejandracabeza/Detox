@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import "./../App.css";
+import styled from "styled-components";
 import Search from "./Search";
 
 function DisplayJSON({ content }) {
   let [searchValue, setSearchValue] = useState("");
 
-  function handleSearchValue(searchValue) {
+  const handleSearchValue = searchValue => {
     setSearchValue(searchValue);
-  }
+  };
 
-  function filterData(data, filter) {
+  const filterData = (data, filter) => {
     return data
       ? data.map((JSONitem, index) => {
           return JSONitem.map((JSONitem1, i) => {
@@ -17,19 +17,15 @@ function DisplayJSON({ content }) {
             let name = JSONitem1["name"].toLowerCase();
             if (name.includes(search)) {
               return (
-                <React.Fragment>
-                  <div className="listItem">
-                    <div>
-                      <div>{JSONitem1.name}</div>
-                    </div>
-                  </div>
-                </React.Fragment>
+                <div>
+                  <div>{JSONitem1.name}</div>
+                </div>
               );
             }
           });
         })
       : null;
-  }
+  };
 
   const filteredData = filterData(content, searchValue);
 
@@ -40,14 +36,28 @@ function DisplayJSON({ content }) {
         search={searchValue}
         handleValue={handleSearchValue}
       />
-      <div className="DisplayJSON">
-        {" "}
+      <DisplayJSONWrapper>
         <h1>Following</h1>
-        <br />
         <div>{filteredData}</div>
-      </div>
+      </DisplayJSONWrapper>
     </React.Fragment>
   );
 }
+
+const DisplayJSONWrapper = styled.div`
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+  width: 40%;
+  height: 50vh;
+  background-color: whitesmoke;
+  color: #808080;
+  border-radius: 5%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  & > * {
+    padding: 10px;
+  }
+`;
 
 export default DisplayJSON;
